@@ -1,5 +1,6 @@
 <template>
   <div>
+<!--    导航条-->
     <div class="nav w100">
       <div class="w1230 auto h40 flex between nav_center">
         <div class="flex nav_center_left h40 fs12 between">
@@ -24,16 +25,27 @@
         </div>
       </div>
     </div>
+<!--菜单-->
+    <home-menu></home-menu>
+    <!--  Banner-->
+    <home-banner></home-banner>
   </div>
+
 </template>
 
 <script>
+import homeMenu from "@/components/home/homeMenu";
+import homeBanner from "@/components/home/homeBanner";
 export default {
   name: "page-home",
   data(){
     return{
       shoppingCartNum:1
     }
+  },
+  components:{
+    homeMenu,
+    homeBanner
   }
 }
 </script>
