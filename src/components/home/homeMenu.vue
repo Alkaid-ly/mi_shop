@@ -215,7 +215,6 @@ export default {
     setInterval(()=>{
       var i=Math.floor(Math.random()*4)
       this.inputText = this.inputTextArr[i]
-      console.log(this.inputText);
     },5000)
   },
   methods:{

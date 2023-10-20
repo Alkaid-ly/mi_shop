@@ -3,7 +3,6 @@
     <div>
       <img width="100%" v-for="(item,index) in bannerList" :key="index" :src="item" v-show="activeNum == index"/>
     </div>
-<!--    替换👇div-->
     <div class="absolute menu">
       <ul>
         <li
@@ -43,7 +42,6 @@
         </li>
       </ul>
     </div>
-
     <div class="arr arr-left absolute" @click="toLeft()"><i class="el-icon-arrow-left"></i> </div>
     <div class="arr arr-right absolute" @click="toRight()"><i class="el-icon-arrow-right"></i> </div>
     <ul class="flex absolute index-box">
@@ -67,7 +65,6 @@ export default {
         require('@/assets/2.webp'),
         require('@/assets/3.webp')
       ],
-      activeNum: 0,
       dataList: [
         {
           title: "手机12",
@@ -563,6 +560,7 @@ export default {
         },
       ],
       dataBOxWidth:'',
+      activeNum: 0
     }
   },
   methods: {
@@ -638,8 +636,6 @@ export default {
   bottom: 20px;
   right: 20px;
 }
-
-
 .item:hover .data-box{
   display: flex;
 }
